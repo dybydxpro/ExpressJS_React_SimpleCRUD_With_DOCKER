@@ -17,7 +17,7 @@ $ npm i react-router-dom
 ## MySQL to Docker
 
 $ docker pull mysql/mysql-server:latest
-$ docker run --name mysql1 -p 3306:3306 -d mysql/mysql-server
+$ docker run --name mysql1 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql/mysql-server
 $ docker ps
 $ docker exec -it mysql1 mysql -uroot -p
 $ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
